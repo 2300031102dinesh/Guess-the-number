@@ -34,10 +34,12 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   Score = 20;
   highScore = 0;
+  secretnumber = Math.trunc(Math.random() * 20 + 1);
   displayMessage('Start guessing...');
   document.querySelector('.number').textContent = '?';
   document.querySelector('.guess').value = '';
   document.querySelector('.score').textContent = Score;
   document.querySelector('.highscore').textContent = highScore;
-  document.querySelector('body').style.backgroundColor = ' #222';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
 });
